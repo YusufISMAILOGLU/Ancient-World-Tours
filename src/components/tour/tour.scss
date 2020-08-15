@@ -1,0 +1,66 @@
+@import "../../index.scss";
+.tour{
+    color: $color1;
+    background-color: rgba( $color3, 0.8);
+    box-shadow: 2px 3px 7px $color3;
+    border-radius: 3px;
+    margin: 2rem auto;
+    transition: $transition;
+    img{
+        width: 100%;
+        display: block;
+        min-height: auto;
+    }
+    &:hover .tour-img span{
+        opacity: 1;
+    }
+    &:hover{
+        transform: scale(1.01);;
+    }
+    h3{
+        text-transform:uppercase;
+        color: $color2;
+    }
+    h4{
+        display: inline-block;
+        margin: 0.5rem 0;
+        background: url("https://www.onlygfx.com/wp-content/uploads/2017/07/orange-watercolor-brush-stroke-5.png");
+        background-repeat: no-repeat;
+        background-size: 100% 95%;
+        padding: 8px 18px;
+    }
+    h5 span{
+        display: inline-block;
+        color: $color2;
+        cursor: pointer;
+        margin:0 0.2rem;
+    }
+    h5 p{
+        margin-top:1rem;
+        transition: $transition;
+    }
+}
+.tour-img{
+    position: relative;
+    span{
+        position:absolute;
+        top: 5px;
+        right: 5px;
+        color:$color2;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: $transition;
+        opacity: 0;
+    }
+}
+
+.tour-info{
+    padding: 1rem;
+}
+@media(min-width: 720px) {
+    .tour{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+
+    }
+}

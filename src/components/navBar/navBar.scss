@@ -1,0 +1,64 @@
+@import "../../index.scss";
+.logo {
+    font-family: 'Lobster', cursive;
+    color: $color1;
+    display: grid;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.logo span{
+    color: $color2;
+}
+.navBar{
+    background-color: $color3;
+    padding: 1rem;
+    // border-bottom: 3px solid $color2;
+    box-shadow: 0px 3px 3px $color2;
+}
+.nav-links{
+    list-style: none;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0.5rem 0;
+    margin: 0.5rem 0;
+    // background-color: $color1;
+    border-radius: 10rem;
+}
+
+@media(min-width: 720px) {
+    .navBar{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+    .logo{
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+    .nav-links{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    }
+}
+
+.nav-link{
+    text-decoration: none;
+    color: $color1;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: url("https://www.onlygfx.com/wp-content/uploads/2017/07/orange-watercolor-brush-stroke-5.png");
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 8px;
+    &:hover{
+        opacity: 0.5;
+    }
+}
